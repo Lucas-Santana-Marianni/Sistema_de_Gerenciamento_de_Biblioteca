@@ -1,0 +1,94 @@
+O objetivo deste projeto é desenvolver um sistema de gerenciamento de uma biblioteca usando SQL para criar e manipular o banco de dados. O sistema será capaz de armazenar informações sobre autores, livros, e empréstimos, além de permitir a execução de operações CRUD (Create, Read, Update, Delete) para gerenciar esses dados. O banco de dados é denominado Biblioteca_DS1 e será composto por três tabelas principais:
+
+Autores: Contém informações sobre os autores, incluindo um identificador único, nome e nacionalidade.
+Livros: Armazena detalhes sobre os livros, como título, autor, ano de publicação e gênero. Cada livro está associado a um autor.
+Empréstimos: Registra os empréstimos dos livros, incluindo a data do empréstimo, data de devolução (se aplicável), e o nome do usuário que fez o empréstimo. Os empréstimos são associados a livros específicos.
+Além disso, o projeto inclui scripts para consultas básicas e operações de atualização e exclusão, que permitem, por exemplo, listar todos os livros com seus respectivos autores, consultar empréstimos em aberto, atualizar a data de devolução de um empréstimo específico, e excluir registros de livros e seus empréstimos associados.
+
+Estrutura do Projeto
+Banco de Dados:
+
+Biblioteca_DS1: O banco de dados principal.
+Tabelas:
+Autores: Armazena informações dos autores.
+Livros: Armazena informações dos livros, incluindo referência aos autores.
+Emprestimos: Registra os empréstimos de livros.
+Consultas:
+
+Listar todos os livros com os respectivos autores.
+Listar todos os empréstimos em aberto (sem data de devolução).
+Atualizar a data de devolução de um empréstimo específico.
+Excluir livros e seus empréstimos associados.
+# Sistema de Gerenciamento de Biblioteca - Biblioteca_DS1
+
+## Descrição
+
+Este projeto é um sistema de gerenciamento de biblioteca desenvolvido em SQL. Ele permite o armazenamento e manipulação de dados relacionados a autores, livros e empréstimos. O sistema suporta operações básicas de CRUD (Create, Read, Update, Delete) para manter os dados organizados e acessíveis.
+
+## Estrutura do Banco de Dados
+
+O banco de dados `Biblioteca_DS1` é composto por três tabelas principais:
+
+- **Autores**:
+  - `AutorID`: Chave primária, identificador único do autor.
+  - `Nome`: Nome do autor.
+  - `Nacionalidade`: Nacionalidade do autor.
+
+- **Livros**:
+  - `LivroID`: Chave primária, identificador único do livro.
+  - `Titulo`: Título do livro.
+  - `AutorID`: Chave estrangeira, referência ao autor do livro.
+  - `AnoPublicacao`: Ano de publicação do livro.
+  - `Genero`: Gênero literário do livro.
+
+- **Emprestimos**:
+  - `EmprestimoID`: Chave primária, identificador único do empréstimo.
+  - `LivroID`: Chave estrangeira, referência ao livro emprestado.
+  - `DataEmprestimo`: Data em que o livro foi emprestado.
+  - `DataDevolucao`: Data de devolução do livro (pode ser NULL se o livro ainda não foi devolvido).
+  - `NomeUsuario`: Nome do usuário que emprestou o livro.
+
+## Operações SQL
+
+### Criação do Banco de Dados e Tabelas
+
+1. Criação do banco de dados `Biblioteca_DS1`.
+2. Criação das tabelas `Autores`, `Livros`, e `Emprestimos`.
+
+### Inserção de Dados
+
+- Inserção de autores e livros.
+- Registro de empréstimos.
+
+### Consultas de Dados
+
+- Listar todos os livros com os nomes de seus autores.
+- Listar todos os empréstimos que ainda estão em aberto.
+
+### Atualização de Dados
+
+- Atualizar a data de devolução de um empréstimo específico.
+
+### Exclusão de Dados
+
+- Remover um livro e todos os registros de empréstimos associados a ele.
+
+## Como Usar
+
+1. Execute o script SQL para criar o banco de dados e as tabelas.
+2. Insira os dados iniciais de autores, livros e empréstimos.
+3. Utilize as consultas fornecidas para visualizar os dados.
+4. Realize atualizações e exclusões conforme necessário.
+
+## Requisitos
+
+- MySQL ou outro sistema de gerenciamento de banco de dados que suporte SQL.
+- Cliente SQL para execução dos scripts.
+
+## Contribuições
+
+Contribuições são bem-vindas! Sinta-se à vontade para abrir issues ou enviar pull requests com melhorias e correções.
+
+## Licença
+
+Este projeto está licenciado sob a licença MIT. Veja o arquivo LICENSE para mais detalhes.
