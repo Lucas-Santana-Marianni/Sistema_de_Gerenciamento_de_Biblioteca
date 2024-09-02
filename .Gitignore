@@ -1,0 +1,16 @@
+# Arquivos de configuração do sistema operacional
+.DS_Store
+Thumbs.db
+
+# Arquivos de configuração do ambiente de desenvolvimento
+.idea/
+.vscode/
+*.log
+*.sql
+
+# Backups de banco de dados
+*.bak
+*.sql~
+
+# Arquivos temporários
+*.tmp
